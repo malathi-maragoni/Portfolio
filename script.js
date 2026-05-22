@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeElements = document.querySelectorAll('.slide-in');
     fadeElements.forEach(el => observer.observe(el));
 
     // Smooth scrolling for navigation links

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,117 +32,189 @@
         }
     </script>
     <style>
-        .fade-in {
+        .slide-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateX(-80px);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .fade-in.visible {
+
+        .slide-in.visible {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
+        }
+
+        .card-orange {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%);
+            border: 1px solid #fdba74;
+        }
+
+        .card-orange:hover {
+            background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 50%, #fdba74 100%);
+            box-shadow: 0 20px 40px -12px rgba(249, 115, 22, 0.2);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
-    
+
+<body
+    class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-extrabold text-slate-900 tracking-tight">Malathi<span class="text-brand-500">.</span></div>
+            <div class="text-2xl font-extrabold text-slate-900 tracking-tight">Malathi<span
+                    class="text-brand-500">.</span></div>
             <ul class="hidden md:flex space-x-8">
-                <li><a href="#home" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Home</a></li>
-                <li><a href="#about" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">About</a></li>
-                <li><a href="#projects" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Projects</a></li>
-                <li><a href="#education" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Education</a></li>
-                <li><a href="#contact" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Contact</a></li>
+                <li><a href="#home" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Home</a>
+                </li>
+                <li><a href="#about" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">About</a>
+                </li>
+                <li><a href="#projects"
+                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Projects</a></li>
+                <li><a href="#education"
+                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Education</a></li>
+                <li><a href="#contact"
+                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-6">
-        
+
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between pt-24 pb-12 fade-in relative gap-12">
+        <section id="home"
+            class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between pt-24 pb-12 slide-in relative gap-12">
             <div class="w-full md:w-3/5 z-10 text-center md:text-left mt-8 md:mt-0">
                 <p class="text-brand-500 font-semibold tracking-wider uppercase mb-4">Hi, I'm</p>
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">Malathi Maragoni</h1>
-                <h2 class="text-xl sm:text-2xl md:text-4xl font-semibold text-slate-500 mb-8">B.Tech Student & Web Developer</h2>
-                <p class="text-base sm:text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed mx-auto md:mx-0">Highly motivated B.Tech student with strong problem-solving skills and a solid foundation in C and Java. Experienced in building responsive web applications and solving 1000+ coding problems.</p>
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">Malathi
+                    Maragoni</h1>
+                <h2 class="text-xl sm:text-2xl md:text-4xl font-semibold text-slate-500 mb-8">B.Tech Student & Web
+                    Developer</h2>
+                <p class="text-base sm:text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed mx-auto md:mx-0">Highly
+                    motivated B.Tech student with strong problem-solving skills and a solid foundation in C and Java.
+                    Experienced in building responsive web applications and solving 1000+ coding problems.</p>
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">View My Work</a>
-                    <a href="#contact" class="px-8 py-4 border-2 border-slate-300 text-slate-700 font-semibold rounded-lg hover:border-brand-500 hover:text-brand-500 transition-all duration-300">Contact Me</a>
+                    <a href="#projects"
+                        class="px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">View
+                        My Work</a>
+                    <a href="#contact"
+                        class="px-8 py-4 border-2 border-slate-300 text-slate-700 font-semibold rounded-lg hover:border-brand-500 hover:text-brand-500 transition-all duration-300">Contact
+                        Me</a>
                 </div>
             </div>
-            
+
+
+
             <!-- Profile Picture -->
             <div class="w-full md:w-2/5 flex justify-center z-10">
                 <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96">
-                    <div class="absolute inset-0 bg-brand-500 rounded-full translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6 opacity-30"></div>
-                    <img src="./profile.jpeg" alt="Malathi Profile Picture" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10">
+                    <div
+                        class="absolute inset-0 bg-brand-500 rounded-full translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6 opacity-30">
+                    </div>
+                    <img src="./profile.jpg" alt="Malathi Profile Picture"
+                        class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10">
                 </div>
             </div>
 
             <!-- Decorative Blob -->
-            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-brand-100 to-brand-500 rounded-full blur-3xl opacity-20 -z-10 animate-pulse hidden lg:block"></div>
+            <div
+                class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-brand-100 to-brand-500 rounded-full blur-3xl opacity-20 -z-10 animate-pulse hidden lg:block">
+            </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-24 fade-in">
+        <section id="about" class="py-24 slide-in">
             <h2 class="text-4xl font-bold text-slate-900 mb-12 relative inline-block">
                 About Me
                 <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
             </h2>
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <div class="text-lg text-slate-600 leading-relaxed space-y-6">
-                    <p>I'm a passionate Computer Science and Engineering student at ACE Engineering College. I love building responsive web applications and solving complex algorithmic challenges.</p>
-                    <p>I'm actively seeking internship opportunities to contribute to real-world software development.</p>
+                    <p>I'm a passionate Computer Science and Engineering student at ACE Engineering College. I love
+                        building responsive web applications and solving complex algorithmic challenges.</p>
+                    <p>I'm actively seeking internship opportunities to contribute to real-world software development.
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold text-slate-900 mb-6">Technical Skills</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">C / Java / Python</span>
-                        <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">HTML / CSS</span>
-                        <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Data Structures</span>
-                        <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Problem Solving</span>
-                        <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Git</span>
-                        <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Responsive Design</span>
+                        <span
+                            class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">C
+                            / Java / Python</span>
+                        <span
+                            class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">HTML
+                            / CSS</span>
+                        <span
+                            class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Data
+                            Structures</span>
+                        <span
+                            class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Problem
+                            Solving</span>
+                        <span
+                            class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Git</span>
+                        <span
+                            class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm hover:border-brand-500 transition-colors">Responsive
+                            Design</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-24 fade-in">
+        <section id="projects" class="py-24 slide-in">
             <h2 class="text-4xl font-bold text-slate-900 mb-12 relative inline-block">
                 Featured Projects
                 <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
             </h2>
             <div class="grid md:grid-cols-2 gap-8">
-                
+
                 <!-- Project 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-500 transition-colors">Social Connect Hub</h3>
-                    <p class="text-slate-600 mb-8 leading-relaxed">A social connectivity platform. View the deployment to see it in action, or check out the code on GitHub.</p>
+                <div
+                    class="card-orange p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-500 transition-colors">
+                        Social Connect Hub</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">A social connectivity platform. View the deployment
+                        to see it in action, or check out the code on GitHub.</p>
                     <div class="flex flex-wrap gap-4 mt-auto">
-                        <a href="https://social-connect-hub-auqg.onrender.com" target="_blank" class="flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800">
-                            Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <a href="https://social-connect-hub-auqg.onrender.com" target="_blank"
+                            class="flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800">
+                            Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
                         </a>
-                        <a href="https://github.com/malathi-maragoni/SOCIAL_CONNECT_HUB" target="_blank" class="flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900">
-                            GitHub <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <a href="https://github.com/malathi-maragoni/SOCIAL_CONNECT_HUB" target="_blank"
+                            class="flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900">
+                            GitHub <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-brand-200 transition-all duration-300 group">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-500 transition-colors">Food Waste Management System</h3>
-                    <p class="text-slate-600 mb-8 leading-relaxed">A web-based platform connecting donors, NGOs, and delivery partners to efficiently manage food surplus and reduce wastage.</p>
+                <div
+                    class="card-orange p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-500 transition-colors">Food
+                        Waste Management System</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">A web-based platform connecting donors, NGOs, and
+                        delivery partners to efficiently manage food surplus and reduce wastage.</p>
                     <div class="flex flex-wrap gap-4 mt-auto">
-                        <a href="https://portfilo-assignment.vercel.app/" target="_blank" class="flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800">
-                            Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <a href="https://portfilo-assignment.vercel.app/" target="_blank"
+                            class="flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800">
+                            Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
                         </a>
-                        <a href="https://github.com/kandhiadhi/food-waste-name" target="_blank" class="flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900">
-                            GitHub <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        <a href="https://github.com/kandhiadhi/food-waste-name" target="_blank"
+                            class="flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900">
+                            GitHub <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -150,26 +223,29 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="py-24 fade-in">
+        <section id="education" class="py-24 slide-in">
             <h2 class="text-4xl font-bold text-slate-900 mb-16 relative inline-block">
                 Education
                 <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
             </h2>
             <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
-                
+
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full"></div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full">
+                    </div>
+                    <div class="card-orange p-6 rounded-xl shadow-sm">
                         <span class="text-brand-500 font-semibold mb-2 block">2024 - 2028</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">B.Tech in Computer Science and Engineering</h3>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">B.Tech in Computer Science and Engineering
+                        </h3>
                         <h4 class="text-slate-600 font-medium mb-3">ACE Engineering College</h4>
                         <p class="text-slate-500">Relevant Coursework: Data Structures, Web Development</p>
                     </div>
                 </div>
 
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full"></div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full">
+                    </div>
+                    <div class="card-orange p-6 rounded-xl shadow-sm">
                         <span class="text-brand-500 font-semibold mb-2 block">2022 - 2024</span>
                         <h3 class="text-xl font-bold text-slate-900 mb-1">Intermediate (MPC)</h3>
                         <h4 class="text-slate-600 font-medium mb-3">Narayana Junior College</h4>
@@ -178,8 +254,9 @@
                 </div>
 
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full"></div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full">
+                    </div>
+                    <div class="card-orange p-6 rounded-xl shadow-sm">
                         <span class="text-brand-500 font-semibold mb-2 block">2022</span>
                         <h3 class="text-xl font-bold text-slate-900 mb-1">Class 10</h3>
                         <h4 class="text-slate-600 font-medium mb-3">Serenity Model High School</h4>
@@ -191,19 +268,27 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-24 fade-in text-center max-w-3xl mx-auto">
+        <section id="contact" class="py-24 slide-in text-center max-w-3xl mx-auto">
             <h2 class="text-4xl font-bold text-slate-900 mb-6 relative inline-block">
                 Get In Touch
                 <div class="absolute -bottom-3 left-1/4 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
             </h2>
-            <p class="text-lg text-slate-600 mb-12 mt-6">I'm currently seeking internship opportunities. Whether you have a position available or just want to connect, feel free to reach out!</p>
-            
+            <p class="text-lg text-slate-600 mb-12 mt-6">I'm currently seeking internship opportunities. Whether you
+                have a position available or just want to connect, feel free to reach out!</p>
+
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <a href="mailto:malathimaragoni@gmail.com" class="px-6 py-3 bg-brand-500 text-white font-semibold rounded-lg shadow-md hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">Email Me</a>
-                <a href="https://www.linkedin.com/in/malathi-maragoni-994358329?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" target="_blank" class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">LinkedIn</a>
-                <a href="https://github.com/malathi-maragoni" target="_blank" class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">GitHub</a>
-                <a href="https://leetcode.com/u/Malathi_Maragoni/" target="_blank" class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">LeetCode</a>
-                <a href="https://www.codechef.com/users/malathi_m" target="_blank" class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">CodeChef</a>
+                <a href="mailto:malathimaragoni@gmail.com"
+                    class="px-6 py-3 bg-brand-500 text-white font-semibold rounded-lg shadow-md hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">Email
+                    Me</a>
+                <a href="https://www.linkedin.com/in/malathi-maragoni-994358329?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"
+                    target="_blank"
+                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">LinkedIn</a>
+                <a href="https://github.com/malathi-maragoni" target="_blank"
+                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">GitHub</a>
+                <a href="https://leetcode.com/u/Malathi_Maragoni/" target="_blank"
+                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">LeetCode</a>
+                <a href="https://www.codechef.com/users/malathi_m" target="_blank"
+                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">CodeChef</a>
             </div>
 
             <p class="text-slate-500 font-medium">Phone: 9347738318</p>
@@ -217,4 +302,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
