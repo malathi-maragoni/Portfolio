@@ -52,6 +52,57 @@
             background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 50%, #fdba74 100%);
             box-shadow: 0 20px 40px -12px rgba(249, 115, 22, 0.2);
         }
+
+        /* Carousel Styles */
+        .carousel-fade {
+            animation: fadeInOut 0.6s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .carousel-dot.active {
+            background-color: #f97316;
+            width: 14px;
+            height: 14px;
+            box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+        }
+
+        .carousel-dot:hover {
+            background-color: #ea580c;
+            transform: scale(1.2);
+        }
+
+        #carousel-slide img {
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -72,6 +123,8 @@
                         class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Projects</a></li>
                 <li><a href="#education"
                         class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Education</a></li>
+                <li><a href="#certificates"
+                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Certificates</a></li>
                 <li><a href="#contact"
                         class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Contact</a></li>
             </ul>
@@ -110,7 +163,7 @@
                     <div
                         class="absolute inset-0 bg-brand-500 rounded-full translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6 opacity-30">
                     </div>
-                    <img src="./profile.jpg" alt="Malathi Profile Picture"
+                    <img src="./assets/profile.jpg" alt="Malathi Profile Picture"
                         class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10">
                 </div>
             </div>
@@ -264,6 +317,49 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="py-24 slide-in">
+            <h2 class="text-4xl font-bold text-slate-900 mb-12 relative inline-block">
+                Certifications & Achievements
+                <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
+            </h2>
+            <div class="flex flex-col items-center">
+                <!-- Carousel Container -->
+                <div class="w-full max-w-4xl">
+                    <!-- Slide Display -->
+                    <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div id="carousel-slide" class="w-full h-96 md:h-full flex items-center justify-center bg-slate-100">
+                            <img id="certificate-image" src="./assets/certificates/AI_for_techies.jpeg" alt="Certificate" class="w-full h-full object-contain p-4">
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate Title -->
+                    <div class="text-center mt-6">
+                        <h3 id="certificate-title" class="text-2xl font-bold text-slate-900 mb-4">AI For Techies</h3>
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <div class="flex justify-center items-center gap-6 mt-8">
+                        <button id="prev-btn" class="p-3 bg-brand-500 text-white rounded-full hover:bg-brand-600 transition-all hover:shadow-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <!-- Dot Indicators -->
+                        <div id="carousel-dots" class="flex gap-2 justify-center">
+                        </div>
+                        
+                        <button id="next-btn" class="p-3 bg-brand-500 text-white rounded-full hover:bg-brand-600 transition-all hover:shadow-lg">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 

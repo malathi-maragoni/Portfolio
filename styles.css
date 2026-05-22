@@ -382,3 +382,34 @@ footer {
         font-size: 3rem;
     }
 }
+
+/* Carousel Styles */
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: #f97316;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.carousel-fade {
+    animation: fadeInCarousel 0.6s ease-in-out;
+}
+
+@keyframes fadeInCarousel {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
