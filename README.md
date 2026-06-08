@@ -35,6 +35,17 @@ https://malathi-maragoni.github.io/Portfolio/
 * Professional UI
 * Project Showcase
 
+## 📸 Screenshots
+
+### Home Page
+![Home](screenshots/homepage.png)
+
+### Projects Section
+![Projects](screenshots/projects.png)
+
+### Contact Page
+![Contact](screenshots/contact.png)
+
 ## Author
 
 Maragoni Malathi
