@@ -556,58 +556,7 @@ document.querySelectorAll(".slide-in").forEach((el) => {
 });
 
 /* Certificate Carousel */
-const certificates = [
-    {
-        image: "./assets/certificates/AI_for_techies.jpeg",
-        title: "AI For Techies"
-    }
-];
 
-let currentSlide = 0;
-
-const image = document.getElementById("certificate-image");
-const title = document.getElementById("certificate-title");
-const dotsContainer = document.getElementById("carousel-dots");
-
-function createDots() {
-    certificates.forEach((_, index) => {
-        const dot = document.createElement("div");
-        dot.classList.add("carousel-dot");
-
-        if (index === 0) {
-            dot.classList.add("active");
-        }
-
-        dot.addEventListener("click", () => {
-            currentSlide = index;
-            updateSlide();
-        });
-
-        dotsContainer.appendChild(dot);
-    });
-}
-
-function updateSlide() {
-    image.src = certificates[currentSlide].image;
-    title.textContent = certificates[currentSlide].title;
-
-    document.querySelectorAll(".carousel-dot").forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentSlide);
-    });
-}
-
-document.getElementById("next-btn").addEventListener("click", () => {
-    currentSlide = (currentSlide + 1) % certificates.length;
-    updateSlide();
-});
-
-document.getElementById("prev-btn").addEventListener("click", () => {
-    currentSlide =
-        (currentSlide - 1 + certificates.length) % certificates.length;
-    updateSlide();
-});
-
-createDots();
 </script>
     
 </body>
