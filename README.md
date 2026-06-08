@@ -44,7 +44,7 @@ https://malathi-maragoni.github.io/Portfolio/
 ![Projects](screenshots/projects.png)
 
 ### Contact Page
-![Contact](screenshots/contact.png)
+![Contact](screenshots/contactt.png)
 
 ## Author
 
