@@ -2,491 +2,205 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maragoni Malathi | Full Stack Developer Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-      content="Portfolio of Maragoni Malathi, Computer Science Engineering student and Full Stack Developer showcasing projects, skills, certifications, coding achievements, and internship work.">
+<title>Maragoni Malathi | Portfolio</title>
 
-    <meta name="keywords"
-      content="Maragoni Malathi, Full Stack Developer, Portfolio, Java Developer, Web Developer, React Developer">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 
-     <meta name="author"
-      content="Maragoni Malathi">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            500: '#f97316',
-                            600: '#ea580c',
-                            900: '#7c2d12',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .slide-in {
-            opacity: 0;
-            transform: translateX(-80px);
-            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: { sans: ['Outfit', 'sans-serif'] },
+colors: {
+brand: {
+500: '#f97316',
+600: '#ea580c'
+}
+}
+}
+}
+}
+</script>
 
-        .slide-in.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
+<style>
+.slide-in {
+opacity: 0;
+transform: translateY(40px);
+transition: all 0.8s ease;
+}
+.slide-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.card-orange {
+background: #fff7ed;
+border: 1px solid #fdba74;
+}
+.card-orange:hover {
+background: #ffedd5;
+box-shadow: 0 15px 30px rgba(249,115,22,0.2);
+}
+</style>
 
-        .card-orange {
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%);
-            border: 1px solid #fdba74;
-        }
-
-        .card-orange:hover {
-            background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 50%, #fdba74 100%);
-            box-shadow: 0 20px 40px -12px rgba(249, 115, 22, 0.2);
-        }
-
-        /* Carousel Styles */
-        .carousel-fade {
-            animation: fadeInOut 0.6s ease-in-out;
-        }
-
-        @keyframes fadeInOut {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #cbd5e1;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .carousel-dot.active {
-            background-color: #f97316;
-            width: 14px;
-            height: 14px;
-            box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
-        }
-
-        .carousel-dot:hover {
-            background-color: #ea580c;
-            transform: scale(1.2);
-        }
-
-        #carousel-slide img {
-            animation: slideIn 0.5s ease-in-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-    </style>
 </head>
 
-<body
-    class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-extrabold text-slate-900 tracking-tight">Malathi<span
-                    class="text-brand-500">.</span></div>
-            <ul class="hidden md:flex space-x-8"> 
-                <li><a href="#home" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Home</a>
-                </li>
-                <li><a href="#about" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">About</a>
-                </li>
-                <li><a href="#projects"
-                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Projects</a></li>
-                <li><a href="#education"
-                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Education</a></li>
-                <li><a href="#certificates"
-                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Certificates</a></li>
-                <li><a href="#contact"
-                        class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- Navbar -->
+<nav class="fixed w-full bg-white/80 backdrop-blur border-b z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<h1 class="text-2xl font-bold">Malathi<span class="text-brand-500">.</span></h1>
 
-    <main class="max-w-7xl mx-auto px-6">
-
-        <!-- Hero Section -->
-        <section id="home"
-            class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between pt-24 pb-12 slide-in relative gap-12">
-            <div class="w-full md:w-3/5 z-10 text-center md:text-left mt-8 md:mt-0">
-                <p class="text-brand-500 font-semibold tracking-wider uppercase mb-4">Hi, I'm</p>
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">Maragoni Malathi</h1>
-                <h2 class="text-xl sm:text-2xl md:text-4xl font-semibold text-slate-500 mb-8">B.Tech Student & Web
-                    Developer</h2>
-                <p class="text-base sm:text-lg text-slate-600 mb-10 max-w-2xl leading-relaxed mx-auto md:mx-0">
-                   Computer Science Engineering student passionate about Full Stack Development, problem solving, and building responsive web applications. Solved 1000+ coding problems across coding platforms and continuously improving through real-world projects, internships, and modern web technologies.
-                    </p>
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="#projects"
-                        class="px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">View
-                        My Work</a>
-                    <a href="https://raw.githubusercontent.com/malathi-maragoni/Portfolio/main/assets/Maragoni_Malathi_Resume.pdf" download
-                         class="px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">
-                        Download My Resume</a>
-                    <a href="#contact"
-                        class="px-8 py-4 border-2 border-slate-300 text-slate-700 font-semibold rounded-lg hover:border-brand-500 hover:text-brand-500 transition-all duration-300">Contact
-                        Me</a>
-                </div>
-            </div>
-
-
-
-            <!-- Profile Picture -->
-            <div class="w-full md:w-2/5 flex justify-center z-10">
-                <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96">
-                    <div
-                        class="absolute inset-0 bg-brand-500 rounded-full translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6 opacity-30">
-                    </div>
-                    <img src="./assets/profile.jpg" alt="Malathi Profile Picture"
-                        class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10">
-                </div>
-            </div>
-
-            <!-- Decorative Blob -->
-            <div
-                class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-brand-100 to-brand-500 rounded-full blur-3xl opacity-20 -z-10 animate-pulse hidden lg:block">
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-24 slide-in">
-            <h2 class="text-4xl font-bold text-slate-900 mb-12 relative inline-block">
-                About Me
-                <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="text-lg text-slate-600 leading-relaxed space-y-6">
-                    <p>I am a Computer Science and Engineering student with a strong interest in Full Stack Web Development and Problem Solving. I enjoy building responsive and user-friendly web applications while continuously improving my programming and software development skills.</p>
-                    <p>I have solved over 1000 coding problems across coding platforms and have experience working with Java, HTML, CSS, JavaScript, Git, and modern web technologies. I am actively seeking internship opportunities to apply my skills in real-world projects and contribute to professional software development teams.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-semibold text-slate-900 mb-6">Technical Skills</h3>
-                    <div class="flex flex-wrap gap-3">
-                       
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">HTML</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">CSS</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">JavaScript</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">React.js</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">Node.js</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">MongoDB</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">MySQL</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">Java</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">Python</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">Git & GitHub</span>
-
-                            <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">Data Structures & Algorithms</span>
-
-                             <span class="px-4 py-2 bg-white border border-slate-200 text-brand-600 rounded-full font-medium shadow-sm">Responsive Design</span>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-24 slide-in">
-            <h2 class="text-4xl font-bold text-slate-900 mb-12 relative inline-block">
-                Featured Projects
-                <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-
-                <!-- Project 1 -->
-                <div
-                    class="card-orange p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-500 transition-colors">
-                        Social Connect Hub</h3>
-                    <p class="text-slate-600 mb-8 leading-relaxed">A social connectivity platform. View the deployment
-                        to see it in action, or check out the code on GitHub.</p>
-                    <div class="flex flex-wrap gap-4 mt-auto">
-                        <a href="https://social-connect-hub-auqg.onrender.com" target="_blank"
-                            class="flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800">
-                            Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/malathi-maragoni/SOCIAL_CONNECT_HUB" target="_blank"
-                            class="flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900">
-                            GitHub <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div
-                    class="card-orange p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-500 transition-colors">Food
-                        Waste Management System</h3>
-                    <p class="text-slate-600 mb-8 leading-relaxed">A web-based platform connecting donors, NGOs, and
-                        delivery partners to efficiently manage food surplus and reduce wastage.</p>
-                    <div class="flex flex-wrap gap-4 mt-auto">
-                        <a href="https://portfilo-assignment.vercel.app/" target="_blank"
-                            class="flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-800">
-                            Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/kandhiadhi/food-waste-name" target="_blank"
-                            class="flex items-center gap-2 text-slate-600 font-semibold hover:text-slate-900">
-                            GitHub <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-             <div class="card-orange p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group">
-                <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-500 transition-colors">
-                                Future Interns Portfolio Website
-                </h3>
-
-                <p class="text-slate-600 mb-8 leading-relaxed">
-                        Designed and developed a professional portfolio website to showcase technical skills, projects, certifications, coding achievements, education, and contact information. Built with a responsive and recruiter-friendly design.
-                </p>
-
-                    <div class="flex flex-wrap gap-4 mt-auto">
-
-                        <a href="https://malathi-maragoni.github.io/Portfolio/"
-                                    target="_blank"
-                                class="flex items-center gap-2 text-brand-600 font-semibold">
-                                            Live Demo
-                                </a>
-
-                        <a href="https://github.com/malathi-maragoni/Portfolio"
-                                    target="_blank"
-                                class="flex items-center gap-2 text-slate-600 font-semibold">
-                                            GitHub
-                                </a>
-
-                        </div>
-         </div>
-</section>
-
-        <!-- Education Section -->
-        <section id="education" class="py-24 slide-in">
-            <h2 class="text-4xl font-bold text-slate-900 mb-16 relative inline-block">
-                Education
-                <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
-            </h2>
-            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-6 space-y-12">
-
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full">
-                    </div>
-                    <div class="card-orange p-6 rounded-xl shadow-sm">
-                        <span class="text-brand-500 font-semibold mb-2 block">2024 - 2028</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">B.Tech in Computer Science and Engineering
-                        </h3>
-                        <h4 class="text-slate-600 font-medium mb-3">ACE Engineering College</h4>
-                        <p class="text-slate-500">Relevant Coursework: Data Structures, Web Development</p>
-                        <p class="text-slate-500">CGPA: 9.07/10</p>
-                    </div>
-                </div>
-
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full">
-                    </div>
-                    <div class="card-orange p-6 rounded-xl shadow-sm">
-                        <span class="text-brand-500 font-semibold mb-2 block">2022 - 2024</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">Intermediate (MPC)</h3>
-                        <h4 class="text-slate-600 font-medium mb-3">Narayana Junior College</h4>
-                        <p class="text-slate-500">CGPA: 9.67/10</p>
-                    </div>
-                </div>
-
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-[11px] top-2 w-5 h-5 bg-white border-4 border-brand-500 rounded-full">
-                    </div>
-                    <div class="card-orange p-6 rounded-xl shadow-sm">
-                        <span class="text-brand-500 font-semibold mb-2 block">2022</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">Class 10</h3>
-                        <h4 class="text-slate-600 font-medium mb-3">TS Model High School</h4>
-                        <p class="text-slate-500">CGPA: 9.7/10</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificates" class="py-24 slide-in">
-            <h2 class="text-4xl font-bold text-slate-900 mb-12 relative inline-block">
-                Certifications & Achievements
-                <div class="absolute -bottom-3 left-0 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
-            </h2>
-            <div class="flex flex-col items-center">
-                <!-- Carousel Container -->
-                <div class="w-full max-w-4xl">
-                    <!-- Slide Display -->
-                    <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <div id="carousel-slide" class="w-full h-96 md:h-full flex items-center justify-center bg-slate-100">
-                            <img id="certificate-image" src="./assets/certificates/AI_for_techies.jpeg" alt="Certificate" class="w-full h-full object-contain p-4">
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate Title -->
-                    <div class="text-center mt-6">
-                        <h3 id="certificate-title" class="text-2xl font-bold text-slate-900 mb-4">AI For Techies</h3>
-                    </div>
-
-                    <!-- Navigation Controls -->
-                    <div class="flex justify-center items-center gap-6 mt-8">
-                        <button id="prev-btn" class="p-3 bg-brand-500 text-white rounded-full hover:bg-brand-600 transition-all hover:shadow-lg">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </button>
-                        
-                        <!-- Dot Indicators -->
-                        <div id="carousel-dots" class="flex gap-2 justify-center">
-                        </div>
-                        
-                        <button id="next-btn" class="p-3 bg-brand-500 text-white rounded-full hover:bg-brand-600 transition-all hover:shadow-lg">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 slide-in text-center max-w-3xl mx-auto">
-            <h2 class="text-4xl font-bold text-slate-900 mb-6 relative inline-block">
-                Get In Touch
-                <div class="absolute -bottom-3 left-1/4 w-1/2 h-1.5 bg-brand-500 rounded-full"></div>
-            </h2>
-            <p class="text-lg text-slate-600 mb-12 mt-6">I'm currently seeking internship opportunities. Whether you
-                have a position available or just want to connect, feel free to reach out!</p>
-
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <a href="mailto:malathimaragoni@gmail.com"
-                    class="px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">
-                    Email Me</a>
-                <a href="https://www.linkedin.com/in/malathi-maragoni-994358329?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"
-                    target="_blank"
-                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">LinkedIn</a>
-                <a href="https://github.com/malathi-maragoni" target="_blank"
-                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">GitHub</a>
-                <a href="https://leetcode.com/u/Malathi_Maragoni/" target="_blank"
-                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">LeetCode</a>
-                <a href="https://www.codechef.com/users/malathi_m" target="_blank"
-                    class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">CodeChef</a>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-    <a href="mailto:malathimaragoni@gmail.com"
-        class="px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg shadow-lg shadow-brand-500/30 hover:bg-brand-600 hover:-translate-y-1 transition-all duration-300">
-        Email Me
-    </a>
-
-    <a href="YOUR_LINKEDIN_LINK" target="_blank"
-        class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">
-        LinkedIn
-    </a>
-
-    <a href="YOUR_GITHUB_LINK" target="_blank"
-        class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">
-        GitHub
-    </a>
-
-    <a href="YOUR_LEETCODE_LINK" target="_blank"
-        class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">
-        LeetCode
-    </a>
-
-    <a href="YOUR_CODECHEF_LINK" target="_blank"
-        class="px-6 py-3 bg-white text-slate-700 border border-slate-200 font-semibold rounded-lg shadow-sm hover:border-brand-500 hover:text-brand-500 hover:-translate-y-1 transition-all duration-300">
-        CodeChef
-    </a>
+<ul class="hidden md:flex gap-8 font-medium text-slate-600">
+<li><a href="#home" class="hover:text-brand-500">Home</a></li>
+<li><a href="#about" class="hover:text-brand-500">About</a></li>
+<li><a href="#projects" class="hover:text-brand-500">Projects</a></li>
+<li><a href="#education" class="hover:text-brand-500">Education</a></li>
+<li><a href="#contact" class="hover:text-brand-500">Contact</a></li>
+</ul>
 </div>
-    <form class="max-w-xl mx-auto mt-10 space-y-4">
+</nav>
 
-        <input
-                 type="text"
-                 placeholder="Your Name"
-                 class="w-full p-4 border border-slate-300 rounded-lg">
+<main class="max-w-7xl mx-auto px-6">
 
-      <input
-                type="email"
-                placeholder="Your Email"
-                class="w-full p-4 border border-slate-300 rounded-lg">
+<!-- HERO -->
+<section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-between gap-12 pt-28">
 
-      <textarea
-                rows="5"
-                placeholder="Your Message"
-                 class="w-full p-4 border border-slate-300 rounded-lg"></textarea>
+<div class="md:w-1/2 text-center md:text-left">
+<h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+Maragoni Malathi
+</h1>
+<p class="text-xl text-slate-600 mb-6">
+Full Stack Developer & CSE Student
+</p>
 
-      <button
-                type="submit"
-                class="px-8 py-4 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-all">
-                Send Message
-      </button>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<a href="#projects" class="px-6 py-3 bg-brand-500 text-white rounded-lg">Projects</a>
+<a href="#contact" class="px-6 py-3 border rounded-lg">Contact</a>
+</div>
+</div>
 
-  </form>
+<div class="md:w-1/2 flex justify-center">
+<img src="./assets/profile.jpg"
+class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-xl">
+</div>
+
 </section>
 
-    </main>
+<!-- ABOUT -->
+<section id="about" class="py-20">
 
-   <footer class="bg-slate-900 py-8 text-center border-t border-slate-800">
+<h2 class="text-3xl font-bold mb-10">About Me</h2>
 
-        <p class="text-slate-400 font-medium mb-3">© 2026 Maragoni Malathi. All Rights Reserved.</p>
+<div class="grid md:grid-cols-2 gap-10">
 
-        <p class="text-slate-500">Full Stack Developer | Java Developer | Problem Solver</p>
+<p class="text-slate-600 leading-relaxed">
+I am a Computer Science student passionate about full stack development.
+I enjoy building responsive applications and solving real-world problems.
+</p>
 
-  </footer>
+<div class="flex flex-wrap gap-3">
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">React</span>
+<span class="skill">Node.js</span>
+<span class="skill">MongoDB</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20">
+
+<h2 class="text-3xl font-bold mb-10">Projects</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div class="card-orange p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-3">Social Connect Hub</h3>
+<p class="text-slate-600 mb-4">Social media platform</p>
+<a href="#" class="text-brand-500">View</a>
+</div>
+
+<div class="card-orange p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-3">Food Waste System</h3>
+<p class="text-slate-600 mb-4">NGO food sharing app</p>
+<a href="#" class="text-brand-500">View</a>
+</div>
+
+<div class="card-orange p-6 rounded-xl">
+<h3 class="font-bold text-xl mb-3">Portfolio</h3>
+<p class="text-slate-600 mb-4">Personal website</p>
+<a href="#" class="text-brand-500">View</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-20">
+
+<h2 class="text-3xl font-bold mb-10">Education</h2>
+
+<div class="space-y-6">
+
+<div class="card-orange p-6 rounded-xl">
+<h3 class="font-bold">B.Tech CSE</h3>
+<p class="text-slate-600">ACE Engineering College</p>
+</div>
+
+<div class="card-orange p-6 rounded-xl">
+<h3 class="font-bold">Intermediate</h3>
+<p class="text-slate-600">Narayana College</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 text-center">
+
+<h2 class="text-3xl font-bold mb-6">Contact</h2>
+
+<div class="flex justify-center gap-4 mb-8 flex-wrap">
+<a href="#" class="px-5 py-2 bg-brand-500 text-white rounded">Email</a>
+<a href="#" class="px-5 py-2 border rounded">LinkedIn</a>
+<a href="#" class="px-5 py-2 border rounded">GitHub</a>
+</div>
+
+<form class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+
+<input type="text" placeholder="Name"
+class="w-full mb-3 p-3 border rounded">
+
+<input type="email" placeholder="Email"
+class="w-full mb-3 p-3 border rounded">
+
+<textarea placeholder="Message"
+class="w-full mb-3 p-3 border rounded"></textarea>
+
+<button class="bg-brand-500 text-white px-6 py-3 rounded">
+Send
+</button>
+
+</form>
+
+</section>
+
+</main>
+
+<footer class="bg-slate-900 text-white text-center py-6">
+© 2026 Malathi
+</footer>
+
+</body>
+</html>
